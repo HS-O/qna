@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>userinput</title>
+    <meta charset = "utf-8"
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	</head>
+	<body>
+		<form action="{{ url_for('index') }}" method ='post'>
+      <div class="userInput">
+        <label for="userInput">userInput:</label>
+       <input placeholder="userInput" type="userInput" name="userInput" required/>
+      </div>
+      <button id="submit" type="submit" class="button" >Submit</button>
+		</form>
+    
+     <hr />
+    {{ message }}
+    {{ userInput }}<br/>
+
+    {% for line in lines %}
+    <p>{{ line }}</p>
+    {% endfor %}
+	</body>
+</html>
